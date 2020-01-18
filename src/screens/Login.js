@@ -12,10 +12,7 @@ export default ({ navigation: { navigate } }) =>
   const onSubmit = useCallback( async () => { 
     const {
       data: {_id: id},
-      data,
     } = await api.post('/devs', {username});
-
-    console.log(data);
 
     navigate('main');
    }, [navigate, username]);

@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import {Image, TextInput, TouchableOpacity, View, Text} from 'react-native';
 
-import logo from './src/assets/images/logo.png';
+import logo from '../assets/images/logo.png';
 
 export default () => 
 {

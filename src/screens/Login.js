@@ -3,14 +3,14 @@ import {Image, TextInput, TouchableOpacity, View, Text} from 'react-native';
 
 import logo from '../assets/images/logo.png';
 
-export default () => 
+export default ({ navigation: { navigate } }) => 
 {
   const [username, setUsername] = useState('');
 
   const onSubmit = useCallback(() => { 
     //TODO try to auth
-    //TODO navigate to main screen
-   }, []);
+    navigate('main');
+   }, [navigate]);
 
   return (
     <View style={{

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {Image, TextInput, TouchableOpacity, View, Text} from 'react-native';
 
 import logo from './src/assets/images/logo.png';
@@ -7,7 +7,10 @@ export default () =>
 {
   const [username, setUsername] = useState('');
 
-  console.log(username);
+  const onSubmit = useCallback(() => { 
+    //TODO try to auth
+    //TODO navigate to main screen
+   }, []);
 
   return (
     <View style={{
@@ -34,15 +37,17 @@ export default () =>
             borderRadius: 4,
           }}
       />
-      <TouchableOpacity style={{
-        marginTop: 10,
-        height: 45,
-        alignSelf: 'stretch',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#DF4723',
-        borderRadius: 4,
-      }}>
+      <TouchableOpacity 
+        onPress={onSubmit}
+        style={{
+          marginTop: 10,
+          height: 45,
+          alignSelf: 'stretch',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#DF4723',
+          borderRadius: 4,
+        }}>
           <Text 
             style={{
               color: '#fff',

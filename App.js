@@ -7,6 +7,8 @@ export default () =>
 {
   const [username, setUsername] = useState('');
 
+  console.log(username);
+
   return (
     <View style={{
       flex: 1,
@@ -19,6 +21,8 @@ export default () =>
       <TextInput 
         autoCapitalize="none" 
         placeholder="Digite seu Usuário no GitHub"
+        value={username}
+        onChangeText={setUsername}
         style={{
             marginTop: 20,
             paddingHorizontal: 15,
